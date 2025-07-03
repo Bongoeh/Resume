@@ -464,6 +464,10 @@ def create_app():
 
     return app
 
+# Add this at the very end of your file
 if __name__ == "__main__":
     app = create_app()
     app.run(debug=True, host='127.0.0.1', port=5000)
+else:
+    # For gunicorn
+    app = create_app()
